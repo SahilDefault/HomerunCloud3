@@ -2,6 +2,6 @@ user_email = "sk0196146@gmail.com"
 user_pass = "P@ssw0rd9"
 
 emailAddress = "sahilkanger27@gmail.com"
-emailPassword = "Sahil@123"
+emailPassword = "Sahil@1234"
 
 send_mail_to = "sahil@getdefault.in"
