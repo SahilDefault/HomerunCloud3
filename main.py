@@ -372,6 +372,9 @@ def check_job():
         try:
             # Call check candidate function
             check_candidates(job_url)
+
+            # Shoot mail
+            shoot_mail(subject="Successfully run", body="Automation complete")
         except Exception as ex:
             # Print the exception
             print(f'Error in Check_candidate function - {ex}')
