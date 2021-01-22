@@ -388,3 +388,6 @@ try:
 except Exception as e:
     # Prints the error
     print(f'Error in Check_job function - {e}')
+
+    # Shoot mail
+    shoot_mail(subject="Failed", body="Automation Failed")
