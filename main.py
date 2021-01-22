@@ -250,6 +250,24 @@ def check_candidates(job_url):
                             # Move the candidate to "First Round" Stage
                             move_candidate(5)
 
+                            # Wait for 2 seconds
+                            time.sleep(2)
+
+                            # Message body
+                            message = f'Candidate Name - {full_name}\nMarks - {r}\nSuccessfully moved automatically to ' \
+                                      f'First ' \
+                                      f'Round '
+
+                            # Shoot mail
+                            shoot_mail(subject=f'{full_name}', body=message)
+
+                            # Click on the job to
+                            driver.get(job_url)
+
+                            # Wait for 15 seconds to load job page page properly
+                            time.sleep(15)
+                            break
+
                         except Exception as moving_exception:
                             print(moving_exception)
 
@@ -260,23 +278,6 @@ def check_candidates(job_url):
                             # Close the browser
                             driver.quit()
 
-                        # Wait for 2 seconds
-                        time.sleep(2)
-
-                        # Message body
-                        message = f'Candidate Name - {full_name}\nMarks - {r}\nSuccessfully moved automatically to ' \
-                                  f'First ' \
-                                  f'Round '
-
-                        # Shoot mail
-                        shoot_mail(subject=f'{full_name}', body=message)
-
-                        # Click on the job to
-                        driver.get(job_url)
-
-                        # Wait for 15 seconds to load job page page properly
-                        time.sleep(15)
-                        break
                     else:
                         print("Fail")
 
@@ -307,6 +308,23 @@ def check_candidates(job_url):
                             # Move the candidate to "First Round" Stage
                             move_candidate(10)
 
+                            # Wait for 2 seconds
+                            time.sleep(2)
+
+                            # Message body
+                            message = f'Candidate Name - {full_name}\nMarks - {r}\nSuccessfully moved automatically to ' \
+                                      f'Disqualified Stage '
+
+                            # Shoot mail
+                            shoot_mail(subject=f'{full_name}', body=message)
+
+                            # Click on the job to
+                            driver.get(job_url)
+
+                            # Wait for 7 seconds to load job page page properly
+                            time.sleep(7)
+                            break
+
                         except Exception as moving_exception:
                             print(moving_exception)
 
@@ -316,23 +334,6 @@ def check_candidates(job_url):
 
                             # Close the browser
                             driver.quit()
-
-                        # Wait for 2 seconds
-                        time.sleep(2)
-
-                        # Message body
-                        message = f'Candidate Name - {full_name}\nMarks - {r}\nSuccessfully moved automatically to ' \
-                                  f'Disqualified Stage '
-
-                        # Shoot mail
-                        shoot_mail(subject=f'{full_name}', body=message)
-
-                        # Click on the job to
-                        driver.get(job_url)
-
-                        # Wait for 7 seconds to load job page page properly
-                        time.sleep(7)
-                        break
 
                 elif cd_result == total_number_of_results and candidate_email != candidate_result['Email']:
                     print("Not in result list")
