@@ -244,6 +244,7 @@ def check_candidates(job_url):
 
                             # Close the browser
                             driver.quit()
+                            break
 
                         # Try if move_candidate function is working properly or not
                         try:
@@ -277,6 +278,7 @@ def check_candidates(job_url):
 
                             # Close the browser
                             driver.quit()
+                            break
 
                     else:
                         print("Fail")
@@ -302,6 +304,7 @@ def check_candidates(job_url):
 
                             # Close the browser
                             driver.quit()
+                            break
 
                         # Try if move_candidate function is working properly or not
                         try:
@@ -334,6 +337,7 @@ def check_candidates(job_url):
 
                             # Close the browser
                             driver.quit()
+                            break
 
                 elif cd_result == total_number_of_results and candidate_email != candidate_result['Email']:
                     print("Not in result list")
@@ -350,6 +354,7 @@ def check_candidates(job_url):
 
             # Close the browser
             driver.quit()
+            break
 
 
 # Check job
