@@ -74,6 +74,9 @@ def add_comment(marks, content, cd_mail):
                                  '2]/div/div[2]/div/div/div/div[2]/span/div[2]/div/div/div['
                                  '1]/div/div[2]/div[2]/button').click()
 
+    print("Successfully Comment the result")
+    return 0
+
 
 # Compose mail function
 def compose_mail(template):
@@ -151,6 +154,8 @@ def compose_mail(template):
     # Wait for 2 seconds
     time.sleep(2)
 
+    print("Mail send successfully")
+
 
 # Move the candidate to desired stage
 def move_candidate(stage):
@@ -170,6 +175,8 @@ def move_candidate(stage):
 
     # Wait for 5 seconds
     time.sleep(5)
+
+    print("Candidate moved successfully")
 
 
 # Function to check candidates
