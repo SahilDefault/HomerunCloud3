@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="07499a51-2331-4968-beb5-9fcd775559b1" name="Default Changelist" comment="Add shoot mail functionality at the end of automation">
       <change beforePath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/main.py" beforeDir="false" afterPath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611331262703</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add shoot mail functionality at the end of automation">
+      <created>1611345963534</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611345963534</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
