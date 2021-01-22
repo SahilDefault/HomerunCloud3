@@ -13,7 +13,7 @@ op.add_argument("--no-sandbox")
 
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=op)
 
-
+print("Window size updated")
 # Start the chrome driver and pass url of homerun login page
 driver.get("https://app.homerun.co/login?redirect=")
 
