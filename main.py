@@ -6,7 +6,7 @@ import os
 
 op = webdriver.ChromeOptions()
 op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-op.addArguments("--window-size=1920,1080")
+op.add_argument("--window-size=1920,1080")
 op.add_argument("--headless")
 op.add_argument("--disable-dev-sh-usage")
 op.add_argument("--no-sandbox")
