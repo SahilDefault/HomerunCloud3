@@ -54,8 +54,13 @@ engineering.append(senior_react)
 # Add comment function
 def add_comment(marks, content, cd_mail):
     # Add result in comments
-    comment = driver.find_element_by_xpath('//*[@id="portal-mount"]/div/div/div[3]/div/div/div/div[2]/div/div['
-                                           '2]/div/div/div/div[2]/span/div[2]/div/div/div/div/div/div/div[1]/div/div')
+    comment = driver.find_element_by_css_selector('#portal-mount > div > div > div.PageModal__wrapper__184dL > div > '
+                                                  'div > div > div.CandidateModal__candidate-profile-wrapper__kT10d > '
+                                                  'div > div.CandidateProfile__widgets__3PMIn > div > div > div > '
+                                                  'div.CandidateWidgets__wrapper__3_j4m > span > '
+                                                  'div.CandidateWidgets__notes__sLByP > div > div > '
+                                                  'div.Notes__note-input-wrapper__1Y6BU > div > div > div > '
+                                                  'div.TextEditor__editor__2HMtf.general__reset__1da_S > div > div')
 
     # Send comment content
     comment.send_keys(f'Marks - {marks}\n{content}\n{cd_mail}')
