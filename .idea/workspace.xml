@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07499a51-2331-4968-beb5-9fcd775559b1" name="Default Changelist" comment="Change css path to xpath of comment area" />
+    <list default="true" id="07499a51-2331-4968-beb5-9fcd775559b1" name="Default Changelist" comment="Change xpath to css selector of comment area">
+      <change beforePath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/main.py" beforeDir="false" afterPath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,11 +67,19 @@
       <option name="project" value="LOCAL" />
       <updated>1611301960786</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Change xpath to css selector of comment area">
+      <created>1611302508586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611302508586</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change css path to xpath of comment area" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change css path to xpath of comment area" />
+    <MESSAGE value="Change xpath to css selector of comment area" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change xpath to css selector of comment area" />
   </component>
 </project>
