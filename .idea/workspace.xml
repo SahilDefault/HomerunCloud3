@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07499a51-2331-4968-beb5-9fcd775559b1" name="Default Changelist" comment="Add shoot mail functionality at the end of automation">
+    <list default="true" id="07499a51-2331-4968-beb5-9fcd775559b1" name="Default Changelist" comment="Change Password">
       <change beforePath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/main.py" beforeDir="false" afterPath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611345963534</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Change Password">
+      <created>1611347912797</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611347912797</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +182,7 @@
     <MESSAGE value="Change mail settings" />
     <MESSAGE value="Add argument to chrome options" />
     <MESSAGE value="Add shoot mail functionality at the end of automation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add shoot mail functionality at the end of automation" />
+    <MESSAGE value="Change Password" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Password" />
   </component>
 </project>

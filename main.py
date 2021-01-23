@@ -357,6 +357,59 @@ def check_candidates(job_url):
             break
 
 
+def check_selected_candidates(job_url):
+    xpath2 = "/html/body/div[3]/div/div[2]/div/div[3]/div[2]/div/div[2]/div/div/div[1]/a/div"
+
+    try:
+        while driver.find_element_by_xpath(xpath2):
+            driver.find_element_by_xpath(xpath2).click()
+
+            # Wait for 10 seconds
+            time.sleep(10)
+
+            # Candidate name
+            cn_name = driver.find_element_by_xpath('.//*[@id="portal-mount"]/div/div/div[3]/div/div/div/div['
+                                                     '2]/div/div[1]/div/div[2]/div[4]/div/div/div[1]/div[2]').text
+
+            # wait for 2 Seconds
+            print(cn_name)
+
+            try:
+                # Compose mail
+                compose_mail("Rishabh")
+
+            except Exception as ex:
+                print(ex)
+
+                # shoot mail
+                shoot_mail(subject=f'Error while sending mail to {cn_name}', body=f'{ex}')
+
+            try:
+                # move candidate to Quiz link is sent stage
+                move_candidate(4)
+
+                # Wait for 5 seconds
+                time.sleep(5)
+
+                # Shoot mail
+                shoot_mail(subject=f'{cn_name}', body="Successfully moved to Quiz link is sent stage")
+
+                # Go to job
+                driver.get(job_url)
+
+                # Wait for 10 seconds to load page properly
+                time.sleep(10)
+
+            except Exception as exp:
+                print(exp)
+
+                # Shoot error mail
+                shoot_mail(subject=f'Error while changing stage of {cn_name}', body=f'{exp}')
+
+    except Exception as ex:
+        print(ex)
+
+
 # Check job
 def check_job():
     for job_xpath in engineering:
@@ -370,6 +423,10 @@ def check_job():
         # Store the current job url
         job_url = driver.current_url
         try:
+
+            # Send quiz link to selected candidates
+            check_selected_candidates(job_url)
+
             # Call check candidate function
             check_candidates(job_url)
 
