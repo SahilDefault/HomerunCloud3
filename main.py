@@ -204,10 +204,18 @@ def check_candidates(job_url):
             full_name = driver.find_element_by_xpath('.//*[@id="portal-mount"]/div/div/div[3]/div/div/div/div['
                                                      '2]/div/div[1]/div/div[2]/div[4]/div/div/div[1]/div[2]').text
 
-            # Scrap email address of the candidate
-            candidate_email = driver.find_element_by_xpath('.//*[@id="portal-mount"]/div/div/div[3]/div/div/div/div['
-                                                           '2]/div/div[1]/div/div[2]/div[4]/div/div/div[2]/div['
-                                                           '2]/button/span').text
+            candidate_email = ""
+            for j in range(2, 5):
+                try:
+                    # Scrap email address of the candidate
+                    candidate_email = driver.find_element_by_xpath(f'.//*[@id="portal-mount"]/div/div/div['
+                                                                   f'3]/div/div/div/div[2]/div/div[1]/div/div[2]/div['
+                                                                   f'4]/div/div/div[{j}]/div[2]/button/span').text
+                except:
+                    pass
+
+                if candidate_email:
+                    break
 
             print(candidate_email, full_name)
 
@@ -369,7 +377,7 @@ def check_selected_candidates(job_url):
 
             # Candidate name
             cn_name = driver.find_element_by_xpath('.//*[@id="portal-mount"]/div/div/div[3]/div/div/div/div['
-                                                     '2]/div/div[1]/div/div[2]/div[4]/div/div/div[1]/div[2]').text
+                                                   '2]/div/div[1]/div/div[2]/div[4]/div/div/div[1]/div[2]').text
 
             # wait for 2 Seconds
             print(cn_name)
