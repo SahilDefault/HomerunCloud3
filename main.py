@@ -225,7 +225,8 @@ def check_candidates(job_url):
             # Check the result of the candidate
             for candidate_result in result_list:
                 cd_result += 1
-                if candidate_email == candidate_result['Email']:
+                if candidate_email == candidate_result['Email'] and full_name == candidate_result['Name']:
+                    print(full_name)
                     print(candidate_email)
                     if candidate_result["Result"] > 60:
                         print("Pass")
