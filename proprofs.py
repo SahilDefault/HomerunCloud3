@@ -1,7 +1,8 @@
 import requests
 import json
 
-headers = {'Content-Type': 'application/json'}
+headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+
 
 # JSON POST Request data
 data = {
@@ -47,3 +48,27 @@ for candidate in response:
         print(e)
 
 print(len(result_list))
+
+
+def add_new_user(user_email, fname, lname):
+    url2 = "https://www.proprofs.com/api/classroom/v1/user/register/"
+
+    data2 = {
+        "token": "7ae56a9445d15fae32e7d1351f6561a6 ",
+        "username": "sahil@getdefault.in",
+        "email": f"{user_email}",
+        "fname": f'{fname}',
+        "lname": f'{lname}',
+        "status": "active",
+        "quiz_assignment": ["https%3A%2F%2Fwww.proprofs.com%2Fquiz-school%2Fugc%2Fstory.php%3Ftitle%3Dreact-native_1247"]
+    }
+
+    response2 = requests.post(
+        url2,
+        data=json.dumps(data2),
+        headers=headers
+    ).json()
+
+    print(response2)
+    print("User added successfully")
+

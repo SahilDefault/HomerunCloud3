@@ -288,6 +288,15 @@ def check_candidates(job_url):
                             driver.quit()
                             break
 
+                    # Handle those candidates which not attempts quiz yet
+                    elif candidate_result["Result"] == 0:
+                        print("Not attempt quiz yet")
+                        i += 1
+                        xpath1 = f'/html/body/div[3]/div/div[2]/div/div[3]/div/div/div[3]/div/div/div[{i}]/a/div'
+                        driver.get(job_url)
+                        time.sleep(8)
+                        break
+
                     else:
                         print("Fail")
 
@@ -368,6 +377,9 @@ def check_candidates(job_url):
 def check_selected_candidates(job_url):
     xpath2 = "/html/body/div[3]/div/div[2]/div/div[3]/div[2]/div/div[2]/div/div/div[1]/a/div"
 
+    # Initializing variable to change candidate's div if something went wrong
+    k = 1
+
     try:
         while driver.find_element_by_xpath(xpath2):
             driver.find_element_by_xpath(xpath2).click()
@@ -375,12 +387,58 @@ def check_selected_candidates(job_url):
             # Wait for 10 seconds
             time.sleep(10)
 
-            # Candidate name
-            cn_name = driver.find_element_by_xpath('.//*[@id="portal-mount"]/div/div/div[3]/div/div/div/div['
-                                                   '2]/div/div[1]/div/div[2]/div[4]/div/div/div[1]/div[2]').text
+            # Scrap full name of the candidate
+            full_name = driver.find_element_by_xpath('.//*[@id="portal-mount"]/div/div/div[3]/div/div/div/div['
+                                                     '2]/div/div[1]/div/div[2]/div[4]/div/div/div[1]/div[2]').text
 
-            # wait for 2 Seconds
-            print(cn_name)
+            candidate_email = ""
+            for j in range(2, 4):
+                try:
+                    # Scrap email address of the candidate
+                    candidate_email = driver.find_element_by_xpath(f'.//*[@id="portal-mount"]/div/div/div['
+                                                                   f'3]/div/div/div/div[2]/div/div[1]/div/div[2]/div['
+                                                                   f'4]/div/div/div[{j}]/div[2]/button/span').text
+                except:
+                    pass
+
+                if candidate_email:
+                    break
+
+            print(candidate_email, full_name)
+            full_name = full_name.split()
+            first_name = full_name[0]
+            last_name = full_name[1]
+            print(first_name)
+            print(last_name)
+
+            try:
+                # Add candidates to users
+                add_new_user(candidate_email, first_name, last_name)
+
+                # Shoot mail when candidate register as user successfully
+                shoot_mail(subject=f'{full_name}', body="Successfully registered as user in proprofs")
+
+            except Exception as addUserException:
+                print(addUserException)
+
+                # Shoot the error message via mail
+                shoot_mail(subject=f'Error while adding {full_name}', body=f"{addUserException}")
+
+                # Wait for 2 seconds
+                time.sleep(2)
+
+                k += 1
+                xpath2 = f'/html/body/div[3]/div/div[2]/div/div[3]/div[2]/div/div[2]/div/div/div[{k}]/a/div'
+
+                # Go to job
+                driver.get(job_url)
+
+                # Wait for 10 seconds to load page properly
+                time.sleep(10)
+                break
+
+            # Wait for 5 seconds
+            time.sleep(5)
 
             try:
                 # Compose mail
@@ -390,7 +448,7 @@ def check_selected_candidates(job_url):
                 print(ex)
 
                 # shoot mail
-                shoot_mail(subject=f'Error while sending mail to {cn_name}', body=f'{ex}')
+                shoot_mail(subject=f'Error while sending mail to {full_name}', body=f'{ex}')
 
             try:
                 # move candidate to Quiz link is sent stage
@@ -400,7 +458,7 @@ def check_selected_candidates(job_url):
                 time.sleep(5)
 
                 # Shoot mail
-                shoot_mail(subject=f'{cn_name}', body="Successfully moved to Quiz link is sent stage")
+                shoot_mail(subject=f'{full_name}', body="Successfully moved to Quiz link is sent stage")
 
                 # Go to job
                 driver.get(job_url)
@@ -412,7 +470,7 @@ def check_selected_candidates(job_url):
                 print(exp)
 
                 # Shoot error mail
-                shoot_mail(subject=f'Error while changing stage of {cn_name}', body=f'{exp}')
+                shoot_mail(subject=f'Error while changing stage of {full_name}', body=f'{exp}')
 
     except Exception as ex:
         print(ex)

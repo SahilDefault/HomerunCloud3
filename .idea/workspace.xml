@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07499a51-2331-4968-beb5-9fcd775559b1" name="Default Changelist" comment="Check for selected candidate">
+    <list default="true" id="07499a51-2331-4968-beb5-9fcd775559b1" name="Default Changelist" comment="Solved the issue of not finding candidate email">
+      <change beforePath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/main.py" beforeDir="false" afterPath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/main.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/proprofs.py" beforeDir="false" afterPath="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3/proprofs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +13,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/file:/media/sahil/C6BC0BB6BC0B9FD3/Work/Get%20Default/Projects/Automation/HomerunCloud3" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1nPn6jWERM8Jy4ZPeNzmKSRsebx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -165,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611384918931</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Solved the issue of not finding candidate email">
+      <created>1611392662462</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611392662462</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +207,7 @@
     <MESSAGE value="Add shoot mail functionality at the end of automation" />
     <MESSAGE value="Change Password" />
     <MESSAGE value="Check for selected candidate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check for selected candidate" />
+    <MESSAGE value="Solved the issue of not finding candidate email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved the issue of not finding candidate email" />
   </component>
 </project>
